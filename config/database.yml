@@ -84,5 +84,7 @@ test:
 production:
   <<: *default
   database: CNMH_production
-  username: CNMH
-  password: <%= ENV['CNMH_DATABASE_PASSWORD'] %>
+  host: localhost
+  username: cristhian
+  password: cristhian
+  
