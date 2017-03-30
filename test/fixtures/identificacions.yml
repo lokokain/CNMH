@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  estado: false
+  tribunalquecomunica: MyString
+  sala: MyString
+  tipodecision: MyString
+  segundainstancia: false
+  magistradoponente: MyString
+  radicado: 1
+  nombreyaliaspost: MyText
+  bloque: MyString
+  lugardeinfluencia: MyString
+  lugarexpedicion: MyString
+  fechaexpedicion: 2017-01-18
+  estadoprovidencia: MyString
+  secomunico: false
+  fechacomunicacion: 2017-01-18
+  delimitaciondeapartados: MyText
+  ordenexhorto: MyText
+  recomendaciones: MyText
+  direcciongrupo: MyText
+  tiempodeterminado: MyText
+
+two:
+  estado: false
+  tribunalquecomunica: MyString
+  sala: MyString
+  tipodecision: MyString
+  segundainstancia: false
+  magistradoponente: MyString
+  radicado: 1
+  nombreyaliaspost: MyText
+  bloque: MyString
+  lugardeinfluencia: MyString
+  lugarexpedicion: MyString
+  fechaexpedicion: 2017-01-18
+  estadoprovidencia: MyString
+  secomunico: false
+  fechacomunicacion: 2017-01-18
+  delimitaciondeapartados: MyText
+  ordenexhorto: MyText
+  recomendaciones: MyText
+  direcciongrupo: MyText
+  tiempodeterminado: MyText

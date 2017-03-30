@@ -1,0 +1,261 @@
+<%if (current_user.tpusu !="Observador") %>
+<!-- Start Service area -->
+  <section id="service">
+    <div class="container">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="service_area">
+          <div class="service_title">
+            <h2>Casos</h2>
+
+
+<%= form_for(caso) do |f| %>
+  <% if caso.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(caso.errors.count, "error") %> prohibited this caso from being saved:</h2>
+
+      <ul>
+      <% caso.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <label  class="label label-info center-block" style="font-size: 15px">Las fechas se manejan en el siguiente orden, (Año/Mes/Día)</label><br><hr>
+<%= link_to 'Cancelar', casos_path , :class => "btn btn-info"%>  
+<button class="btn btn-info">Guardar</button>
+<div id="primera_parte" >
+<table style="margin-right: auto; margin-left: auto; height: 100%;", class="table table-responsive">
+<tr> 
+<td colspan="2"><%= f.label :"Numero de Radicado" %></td>
+    <td><%= f.number_field :radicado , :required => true%></td>
+    
+</tr>
+
+  <tr> 
+<td colspan="2"><%= f.label :"Nombre y alias de los postulados condenados" %></td>
+    <td><%= f.text_area :nombreimplicado , :required => true %></td>
+  </tr>
+
+
+
+  <tr> 
+<td colspan="2"><%= f.label :"Tribunal que comunica la providencia" %></td>
+    <td><%= f.text_field :tribunal , :required => true %></td>
+
+    </tr>
+
+  <tr> 
+<td colspan="2"><%= f.label :"Estado de la providencia" %></td>
+    
+    <% if ((@caso.estado) == 'Confirmada') %>
+    <td><%= f.select :estado, options_for_select([ @caso.estado , "No Confirmada"])%></td>
+        <% else %>
+              <% if ((@caso.estado) =="No Confirmada")%>
+                    <td><%= f.select :estado, options_for_select([ @caso.estado ,"Confirmada"])%></td>    
+             
+                    
+        <% end %>
+    
+    <% end %>
+<% if (((@caso.estado) != 'Confirmada') && ((@caso.estado) !="No Confirmada") ) %>
+  <td><%= f.select :estado, options_for_select([ "No Confirmada" ,"Confirmada"])%></td>    
+
+<% end %>
+    
+    </tr>
+
+
+<tr>
+<td>
+</td>
+<td></td>
+<td>
+<input type="button" name="answer" class="btn btn-info" value="Siguiente" onclick="primera()" />
+</td>
+</tr>
+
+</table>
+</div>
+
+
+
+<div id="segunda_parte" style="display: none; " >
+<table style="margin-right: auto; margin-left: auto; width: 100%" class="table table-responsive">
+<tr> 
+<td colspan="2"><%= f.label :"Sala" %></td>
+    <td><%= f.text_field :sala , :required => "true" %></td>
+</tr>
+<tr> 
+<td colspan="2"><%= f.label :"Tipo de decisión" %></td>
+    <td><%= f.text_field :tipodecision , :required => "true" %></td>
+   </tr> 
+<tr> 
+<td colspan="2"><%= f.label :"Segunda instancia" %></td>
+    <td><%= f.check_box :segundainstancia %></td>
+    </tr>
+
+<tr> 
+<td colspan="2"><%= f.label :"Magistrado Ponente" %></td>
+    <td><%= f.text_field :magistradoponente , :required => "true" %></td>
+    </tr>
+
+<tr>
+<td colspan="2">
+<input type="button" name="answer" class="btn btn-info" value="Volver" onclick="segundav()" />
+</td>
+<td colspan="2">
+<input type="button" name="answer" class="btn btn-info" value="Siguiente" onclick="segunda()" />
+</td>
+</tr>
+
+</table>
+</div>
+
+<div id="tercera_parte" style="display: none; ">
+
+
+<table style="margin-right: auto; margin-left: auto;" class="table table-responsive"> 
+
+<tr> 
+<td colspan="2"><%= f.label :Bloque %></td>
+    <td><%= f.text_field :bloque, :required => "true"  %></td>
+    </tr>
+
+    <tr> 
+<td colspan="2"><%= f.label :"Lugar de Influencia del Bloque" %></td>
+    <td><%= f.text_field :lugardeinfluencia , :required => "true" %></td>
+    </tr>
+
+    <tr> 
+<td colspan="2"><%= f.label :"Lugare de expedicion" %></td>
+    <td><%= f.text_field :lugarexpedicion , :required => "true" %></td>
+    </tr>
+
+    <tr> 
+<td colspan="2"><%= f.label :"Fecha de expedición de la sentencia" %></td>
+    <td><%= f.date_select :fechaexpedicion %></td>
+    </tr>
+
+    <tr> 
+<td colspan="2"><%= f.label :"Estado de la providencia" %></td>
+    <td><%= f.text_field :estadoprovidencia , :required => "true" %></td>
+    </tr>
+
+    <tr > 
+<td colspan="2"><%= f.label :"Comunicación al CMH " %></td>
+    <td><%= f.check_box :secomunico  %></td>
+
+    <tr id="sicomunico"> 
+<td colspan="2"><%= f.label :"Fecha (Solo si se comunico) " %></td>
+    <td><%= f.date_select :fechacomunicacion %></td>
+</tr>
+
+<tr>
+<td colspan="2">
+<input type="button" name="answer" class="btn btn-info" value="Volver" onclick="tercerav()" />
+</td>
+<td colspan="2">
+<input type="button" name="answer" class="btn btn-info" value="Siguiente" onclick="tercera()" />
+</td>
+</tr>
+
+</table>
+</div>
+
+
+<div id="cuarta_parte" style="display: none;">
+<table style="margin-right:auto; margin-left: auto;" class="table table-responsive" >
+<tr> 
+<td colspan="2"><%= f.label :"Delimitación de apartados que relacionan al cnmh en los considerandos de la sentencia ", :class => "modal-title" %></td></tr>
+    <td colspan="2"> <%= f.text_area :delimitaciondeapartados , :required => "true" ,:style => "width: 100% ;height: 400px;"%></td>
+</tr>
+<tr>
+<td>
+<input type="button" name="answer" class="btn btn-info" value="Volver" onclick="cuartav()" />
+</td>
+<td>
+<input type="button" name="answer" class="btn btn-info" value="Siguiente" onclick="cuarta()" />
+</td>
+</tr>
+</table>
+</div>
+
+
+
+
+<div id="ultima_parte" style="display: none;">
+<table style="margin-right: auto; margin-left: auto;" class="table table-responsive">
+<tr> 
+<td colspan="4"><%= f.label :"ORDEN Y/O EXHORTO" %></td>
+<td colspan="4"><%= f.label :"RECOMENDACIONES" %></td>
+<td colspan="4"><%= f.label :"DIRECCIÓN Y/O GRUPO RESPONSABLE DE LA IMPLEMENTACIÓN DE LA MEDIDA" %></td>
+<td colspan="4"><%= f.label :"TIEMPO DETERMINADO EN LA SENTENCIA PARA LA EJECUCIÓN DE LA MEDIDA" %></td>
+</tr>
+
+
+    <tr> 
+    <td colspan="4" style="width: 25%"><%= f.text_area :ordenexhorto , :required => "true" , :style =>"width: 100%;height: 460px;" %></td>
+    <td colspan="4" style="width: 25%"><%= f.text_area :recomendaciones, :required => "true" , :style =>"width: 100%;height: 460px;" %></td>
+    <td colspan="4" style="width: 25%"><%= f.text_area :direcciongrupo,:required => "true" , :style =>"width: 100%;height: 460px;" %></td>
+    <td colspan="4" style="width: 25%"><%= f.text_area :tiempodeterminado,:required => "true" , :style =>"width: 100%;height: 460px;" %></td>
+</tr>
+
+<tr>
+<td colspan="12"></td>
+<td colspan ="8"><input type="button" name="answer" class="btn btn-info" value="Volver" onclick="ultimav()"></td>
+</tr>
+</tr>
+</table>
+</div>
+
+
+
+
+<script type="text/javascript">
+
+function primera() {
+$("#segunda_parte").show();   
+$("#primera_parte").toggle(); 
+}
+
+function segunda() {
+$("#tercera_parte").show();   
+$("#segunda_parte").toggle(); 
+}
+
+function tercera() {
+$("#cuarta_parte").show();   
+$("#tercera_parte").toggle(); 
+}
+
+function cuarta() {
+$("#ultima_parte").show();   
+$("#cuarta_parte").toggle(); 
+}
+
+function segundav() {
+$("#segunda_parte").toggle();   
+$("#primera_parte").show(); 
+}
+
+function tercerav() {
+$("#tercera_parte").toggle();   
+$("#segunda_parte").show(); 
+}
+
+function cuartav() {
+$("#cuarta_parte").toggle();   
+$("#tercera_parte").show(); 
+}
+
+function ultimav() {
+$("#ultima_parte").toggle();   
+$("#cuarta_parte").show(); 
+}
+
+
+
+
+</script>
+<% end -%>
+<% end %>

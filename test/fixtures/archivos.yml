@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  idinforme: 1
+  descripcion: MyString
+  title: MyString
+
+two:
+  idinforme: 1
+  descripcion: MyString
+  title: MyString

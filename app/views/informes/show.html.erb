@@ -1,0 +1,154 @@
+<section id="service">
+    <div class="container">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="service_area">
+          <div class="service_title">
+
+<table style="margin-right: auto; margin-left: auto; width: 100%" class="table-bordered table-condensed">
+
+<p id="notice"><%= notice %>
+
+<tr>
+<td class="popover-title" colspan="8"><h1>Reuniones</h1></td>
+</tr>
+
+<tr>
+  <td class="popover-title" colspan="8"><h2 >Seguimiento y Reportes</h2></td>
+
+</tr>
+
+
+<tr>
+  <td colspan="8" class="label-info"><h3 class="label-info">Acta y Acuerdos</h3></td>
+</tr>
+
+<tr>
+  <td colspan="2"  width="22%"><strong class="panel-title" >Fecha: </strong></td>
+  <td><%= @informe.fecha %></td>
+</tr>
+
+<tr>
+  <td colspan="2"><strong class="panel-title">Lugar: </strong></td>
+  <td><%= @informe.lugar %></td>
+</tr>
+
+<tr>
+<td colspan="2"><strong class="panel-title">Resumen: </strong></td>
+  <td style="vertical-align:baseline;"><%= simple_format(@informe.resumen,:class => "text-justify") %></td>
+</tr>
+
+<tr ><td class="popover-title" colspan="8" ><h3  >Requerimientos<h3></td></tr>
+
+
+<tr class="label-info"><td colspan="8" "><h3 " >Recibidos<h3></td></tr>
+<tr>
+  <td colspan="2"><strong class="panel-title">Fecha de respuesta:</strong></td>
+  <td><%= @informe.fechares %></td>
+</tr>
+
+<tr>
+  <td colspan="2"><strong class="panel-title">Descripcion:</strong></td>
+  <td style="vertical-align:baseline;"><%= simple_format(@informe.descripcion,:class => "text-justify") %></td>
+</tr>
+
+<tr>
+  <td colspan="2"><strong class="panel-title">Entidad:</strong></td>
+  <td><%= @informe.entidad %></td>
+</tr>
+
+<tr>
+  <td colspan="2"><strong class="panel-title">Respuesta obtenida:</strong></td>
+  <%if @informe.recirespo %>
+  <td class="label-success" >Recibido </td>
+  <% else %>
+    <td class="label-warning">No Recibido</td>
+  <% end %>
+
+</tr>
+<tr class="label-info"><td colspan="8" "><h3 " >Entregados<h3></td></tr>
+<tr>
+  <td colspan="2"><strong class="panel-title">Fecha de entrega:</strong></td>
+<td>  <%= @informe.fechaentre %></td>
+</tr>
+
+<tr>
+  <td colspan="2"><strong class="panel-title">Descripcion de entrega:</strong></td>
+  <td style="vertical-align:baseline;"><%= simple_format(@informe.entredescr,:class => "text-justify") %></td>
+</tr>
+
+<tr>
+  <td colspan="2"><strong class="panel-title">Entidad :</strong></td>
+  <td><%= @informe.entidadentre %></td>
+</tr>
+
+<tr>
+  <td colspan="2"><strong class="panel-title">pdf Entregado:</strong></td>
+<td>  <%= @informe.pdfentre %></td>
+</tr>
+
+<tr>
+  <td colspan="2"><strong class="panel-title">Recibio respuesta:</strong></td>
+  <%if @informe.respondidoentre %>
+  <td class="label-success" width="100%">Recibido </td>
+  <% else %>
+    <td class="label-warning">No Recibido</td>
+  <% end %>
+
+</tr>
+<tr class="label-info"><td colspan="8" "><h3 " >Observaciones y Alertas<h3></td></tr>
+
+<tr>
+  <td colspan="2"><strong class="panel-title">Descripción: </strong></td>
+  <td style="vertical-align:baseline;"><%= simple_format(@informe.descripcionob,:class => "text-justify") %></td>
+</tr>
+
+<tr>
+  <td colspan="2"><strong class="panel-title">Fecha: </strong></td>
+  <td><%= @informe.fechaobs %></td>
+</tr>
+
+<tr>
+<%if ( @informe.cumplido == true )  %>
+
+<tr>
+<td colspan="2"><strong class="panel-title">Estado </strong></td>
+<td class="label-success">Listo</td></tr>
+<% else %>
+<td colspan="2"><strong class="panel-title">Estado </strong></td>
+<td class="label-danger"><label>PENDIENTE</label></td></tr>
+
+<% end -%>
+
+
+</tr>
+
+<tr class="label-info"><td colspan="8" "><h3 " >Audiencias de Seguimiento<h3></td></tr>
+<tr>
+  <td colspan="2"><strong class="panel-title">Fecha:</strong></td>
+  <td><%= @informe.fechaau %></td>
+</tr>
+
+<tr>
+  <td colspan="2"><strong class="panel-title">Descripción:</strong></td>
+  <td style="vertical-align:baseline;"><%= simple_format(@informe.descrup,:class => "text-justify") %></td>
+</tr>
+</table>
+
+
+<%if (current_user.tpusu !="Observador") %>
+<%= link_to 'Editar', edit_informe_path(@informe, :casoid => @informe.idcaso), :class => "btn btn-info"%>
+<% end -%>
+<%= link_to "Volver", {:controller => "informes", :action => "index", :casoid => @informe.idcaso }, :class => "btn btn-info"%>
+<%= link_to "Generar pdf", {:controller => "informes", :action => "show", :format => :pdf }, :class => "btn btn-info", target: :_blank %>
+</tr>
+
+
+
+</table>
+
+
+  </ul>
+        </div>
+      </div>
+    </div>
+  </section>

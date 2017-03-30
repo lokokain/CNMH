@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1 class="popover-title" style="font-size: 25px">Casos </h1>
+
+</style>
+<table align="center" class="table table-bordered table-responsive">
+  <thead>
+    <tr >
+      <th class="popover-title">Radicado</th>
+      <th class="popover-title">Nombreimplicado</th>
+      <th class="popover-title">Tribunal</th>
+      <th class="popover-title">Estado</th>
+            
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @casos.each do |caso| %>
+      <tr>
+        <td><%= caso.radicado %></td>
+        <td><%= caso.nombreimplicado %></td>
+        <td><%= caso.tribunal %></td>
+        <%if caso.estado == "Confirmada" %>
+        
+        <td class="label-success"><%= caso.estado %></td>  
+          <% else %>
+          <td class="label-warning"><%= caso.estado %></td>
+        <% end -%>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</body>
+</html>

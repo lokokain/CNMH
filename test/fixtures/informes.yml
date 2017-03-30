@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  idcaso: 1
+  fecha: 2017-02-05
+  lugar: MyString
+  resumen: MyText
+  fechares: 2017-02-05
+  descripcion: MyText
+  entidad: MyString
+  pdfreci: MyString
+  recirespo: false
+  fechaentre: 2017-02-05
+  entredescr: MyText
+  entidadentre: MyString
+  pdfentre: MyString
+  respondidoentre: false
+  descripcionob: MyText
+  fecha: 2017-02-05
+  cumplido: false
+  fechaau: 2017-02-05
+  descrup: MyText
+
+two:
+  idcaso: 1
+  fecha: 2017-02-05
+  lugar: MyString
+  resumen: MyText
+  fechares: 2017-02-05
+  descripcion: MyText
+  entidad: MyString
+  pdfreci: MyString
+  recirespo: false
+  fechaentre: 2017-02-05
+  entredescr: MyText
+  entidadentre: MyString
+  pdfentre: MyString
+  respondidoentre: false
+  descripcionob: MyText
+  fecha: 2017-02-05
+  cumplido: false
+  fechaau: 2017-02-05
+  descrup: MyText

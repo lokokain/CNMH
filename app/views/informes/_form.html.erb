@@ -1,0 +1,169 @@
+<%if (current_user.tpusu !="Observador") %>
+<section id="service">
+    <div class="container">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+
+
+
+<%= form_for(informe) do |f| %>
+  <% if informe.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(informe.errors.count, "error") %> prohibited this informe from being saved:</h2>
+
+      <ul>
+      <% informe.errors.full_messages.each do |message|  %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<label class="label label-info center-block " style="font-size: 15px">Las fechas se manejan en el siguiente orden, (Año/Mes/Día)</label>
+  <table align="center" style="width: 80% ;height:80%" class="table container table-responsive " >
+
+  <div  style="display: none">
+    <%= f.number_field :idcaso , :value => params[:casoid]  %>
+  </div>
+
+  <tr>
+    <td colspan="8" class="text-center panel-title label-info"><h2>Seguimiento y Reporte</h2></td>
+
+  </tr>
+  <tr >
+    <td colspan="2" ><%= f.label :"Fecha: " %></td>
+    <td colspan="2"><%= f.date_select :fecha  %></td>
+  </tr>
+
+  <tr >
+    <td colspan="2"><%= f.label :"Lugar: " %></td>
+    <td colspan="2"><%= f.text_field :lugar , :required => true %></td>
+  </tr>
+
+  <tr >
+    <td colspan="8" class="panel-title text-center text-center"><%= f.label :"Resumen" %></td>
+    </tr>
+
+
+    <tr>
+    <td colspan="8"><%= f.text_area :resumen , :style => "width : 100% ; height :200px " , :required => true%></td>
+
+  </tr>
+
+  <tr>
+    <td colspan="8" class="label-info text-center"><h2>Recibidos</h2></td>
+
+  </tr>
+
+  <tr >
+    <td colspan="2"><%= f.label :"Fecha de Respuesta" %></td>
+    <td colspan="2"><%= f.date_select :fechares %></td>
+  </tr>
+
+  <tr>
+    <td colspan="8" class="panel-title text-center text-center"><%= f.label :"Descripción" %></td>
+    </tr>
+
+
+    <tr>
+    <td colspan="8"><%= f.text_area :descripcion , :style => "width : 100% ; height :200px" %></td>
+  </tr>
+
+
+
+  <tr >
+    <td colspan="2"><%= f.label :"Entidad: " %></td>
+    <td colspan="2"><%= f.text_field :entidad %></td>
+  </tr>
+
+  
+  <tr >
+    <td colspan="2"><%= f.label :"Recibio respuesta" %></td>
+    <td colspan="2"><%= f.check_box :recirespo %></td>
+  </tr>
+<tr>
+    <td colspan="8" class="label-info text-center"><h2>Entregados</h2></td>
+
+  </tr>
+  <tr >
+    <td colspan="2"><%= f.label :"Fecha de Entrega" %></td>
+    <td colspan="2"><%= f.date_select :fechaentre %></td>
+  </tr>
+
+  
+<tr>
+    <td colspan="8" class="panel-title text-center text-center"><%= f.label :"Descripcion" %></td>
+    </tr>
+
+
+    <tr>
+    <td colspan="8"><%= f.text_area :entredescr , :style => "width : 100% ; height :200px" %></td>
+  </tr>
+
+
+
+
+  <tr >
+    <td colspan="2"><%= f.label :"Entidad: " %></td>
+    <td colspan="2"><%= f.text_field :entidadentre %></td>
+  </tr>
+
+    <tr >
+    <td colspan="2"><%= f.label :"Recibio respuesta: " %></td>
+    <td colspan="2"><%= f.check_box :respondidoentre %></td>
+  </tr>
+<tr>
+    <td colspan="8" class="label-info text-center"><h2>Observaciones y Alertas</h2></td>
+
+  
+
+<tr>
+    <td colspan="8" class="panel-title text-center text-center"><%= f.label :"Descripción" %></td>
+    </tr>
+
+
+    <tr>
+    <td colspan="8"><%= f.text_area :descripcionob , :style => "width : 100% ; height :200px", :required => true  %></td>
+  </tr>
+
+
+  <tr >
+    <td colspan="2"><%= f.label :"Fecha" %></td>
+    <td colspan="2"><%= f.date_select :fechaobs %></td>
+  </tr>
+
+  <tr >
+    <td colspan="2"><%= f.label :"Estado de cumplimiento" %></td>
+    <td colspan="2"><%= f.check_box :cumplido  %></td>
+  </tr>
+  <tr>
+    <td colspan="8" class="label-info text-center"><h2>Audiencias de Seguimiento</h2></td>
+
+  </tr>
+  <tr >
+    <td colspan="2"><%= f.label :"Fecha Audiencia" %></td>
+    <td colspan="2"><%= f.date_select :fechaau %></td>
+  </tr>
+
+<tr>
+    <td colspan="8" class="panel-title text-center text-center"><%= f.label :"Descripción de Audiencia" %></td>
+    </tr>
+
+
+    <tr>
+    <td colspan="8"><%= f.text_area :descrup , :style => "width : 100% ; height :200px" , :required => true %></td>
+  </tr>
+
+
+
+
+  <tr class="actions">
+    <td colspan="2"><%= f.submit "Guardar", :class => "btn btn-info" %></td>
+    <td> <%= link_to "Volver", {:controller => "informes", :action => "index", :casoid => "#{params[:casoid]}" }, :class => "btn btn-default"%></td>
+  </tr>
+
+  </table>
+<% end %>
+</div>
+</div>
+</section>
+<% end -%>

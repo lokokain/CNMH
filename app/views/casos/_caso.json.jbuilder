@@ -1,0 +1,2 @@
+json.extract! caso, :id, :radicado, :nombreimplicado, :tribunal, :estado,  :tribunalquecomunica, :sala, :tipodecision, :segundainstancia, :magistradoponente,  :bloque, :lugardeinfluencia, :lugarexpedicion, :fechaexpedicion, :estadoprovidencia, :secomunico, :fechacomunicacion, :delimitaciondeapartados, :ordenexhorto, :recomendaciones, :direcciongrupo, :tiempodeterminado, :created_at, :updated_at
+json.url caso_url(caso, format: :json)

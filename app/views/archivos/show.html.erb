@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Idinforme:</strong>
+  <%= @archivo.idinforme %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @archivo.descripcion %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @archivo.title %>
+</p>
+
+<%= link_to "Volver", {:controller => "archivos", :action => "index", :casoid => "#{params[:casoid]}", :informeid => archivo.idinforme }, :class => "btn btn-default"%>

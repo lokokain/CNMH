@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Pdf</title>
+<meta charset="utf-8">
+
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    	  <%= wicked_pdf_stylesheet_link_tag "pdf" -%>
+    	  <%= wicked_pdf_javascript_include_tag "application" %>
+  
+<div style="image-rendering: auto"> <%= wicked_pdf_image_tag ('marcapdf.png') %></div>  
+                 
+            
+
+
+</head>
+<body>
+<%= yield %>
+</body>
+</html>

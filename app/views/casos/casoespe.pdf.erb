@@ -1,0 +1,176 @@
+
+<body>
+<section id="service">
+    <div class="container">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="service_area">
+          <div class="service_title">
+
+    
+
+
+
+
+
+<table class="table-responsive">
+  <tr><br>
+  <h1 class="table-bordered popover-title" style="font-size: 12px;font-size: 25px;">IDENTIFICACIÓN Y FORMALIDAD DE LA SENTENCIA ANALIZADA</h1></tr>
+</table>
+
+
+<table style="font-size: 12px;margin-right: auto; margin-left: auto;" class="table-bordered table-condensed table-responsive">
+<tr> 
+<td colspan="2" style="width: 25%"> <strong class="panel-title">Numero de Radicado</strong></td>
+
+    <td> <%= @caso.radicado %></td>
+    
+</tr>
+
+  <tr> 
+<td colspan="2"><strong class="panel-title" >Nombre y alias de los postulados condenados</strong></td>
+    <td><%= @caso.nombreimplicado %></td>
+  </tr>
+
+
+
+  <tr> 
+<td colspan="2" ><strong class="panel-title">Tribunal que comunica la providencia</strong></td>
+    <td colspan="2"><%= @caso.tribunal %></td>
+
+    </tr>
+
+  <tr> 
+<td colspan="2"><strong class="panel-title">Estado de la providencia</strong></td>
+    
+  
+    <td> <%= @caso.estado %></td>
+
+    </tr>
+
+ 
+<tr> 
+<td colspan="2"><strong class="panel-title">Sala</strong></td>
+    <td><%= @caso.sala %></td>
+</tr>
+<tr> 
+<td colspan="2"><strong class="panel-title">Tipo de decisión</strong></td>
+    <td><%= @caso.tipodecision %></td>
+   </tr> 
+<tr> 
+<td colspan="2" ><strong class="panel-title">Segunda instancia</strong></td>
+    <% if ( @caso.segundainstancia == true) %>
+    
+    <td class="alert-success">Se encuentra</td> 
+    <% else %>
+    <td class="alert-danger">Aun no esta en segunda</td>   
+    <% end %>
+    </tr>
+
+<tr> 
+<td colspan="2"><strong class="panel-title">Magistrado Ponente</strong></td>
+    <td><%= @caso.magistradoponente %></td>
+    </tr>
+
+<tr> 
+<td colspan="2"><strong class="panel-title">Bloque</strong></td>
+    <td><%= @caso.bloque %></td>
+    </tr>
+
+    <tr> 
+<td colspan="2" ><strong class="panel-title">Lugar de Influencia del Bloque</strong></td>
+    <td><%= @caso.lugardeinfluencia %></td>
+    </tr>
+
+    <tr> 
+<td colspan="2"><strong class="panel-title">Lugare de expedicion</strong></td>
+    <td><%= @caso.lugarexpedicion %></td>
+    </tr>
+
+    <tr> 
+<td colspan="2" ><strong class="panel-title">Fecha de expedición de la sentencia</strong></td>
+    <td><%= @caso.fechaexpedicion %></td>
+    </tr>
+
+    <tr> 
+<td colspan="2" ><strong class="panel-title">Estado de la providencia</strong></td>
+    <td><%= @caso.estadoprovidencia %></td>
+    </tr>
+
+
+  
+
+    <tr > 
+
+<td colspan="2"><strong class="panel-title">Comunicación al CMH </strong></td>
+    <% if (@caso.secomunico == true) %>
+    <td class="alert-success">Comunicado</td>  
+    <% else %>
+    <td class="alert-danger">No Comunicado</td>  
+    <% end %>
+
+    <tr> 
+    <% if (@caso.secomunico == true) %>
+<td colspan="2" ><strong class="panel-title">Fecha (Solo si se comunico) </strong></td>
+    
+    <td class="alert-success"><%= @caso.fechacomunicacion %></td>
+    <% else %>
+    
+    <%end%>
+</tr>
+
+
+<tr ></tr></tr>
+<table>
+  <tr><td></td>
+
+  </tr>
+</table>
+
+
+<table style="margin-right: auto; margin-left: auto; width: 100%" class="table-bordered table-condensed text-justify">
+<tr> 
+
+<td colspan="8" class="popover-title" ><h2 style="font-size: 21px;text-align: center">Delimitación de apartados que relacionan al cnmh en los considerandos de la sentencia<h2></td></tr>
+    <td  style="width: 100% ;vertical-align:baseline;" ><%= simple_format(@caso.delimitaciondeapartados) %></td>
+<td>
+  </td>
+ 
+</tr>
+</table>
+<table>
+  <tr><br>
+  <h1 class="table-bordered popover-title"  style="font-size: 25px;">ORIENTACIÓN PARA LA IMPLEMENTACIÓN DE LAS ÓRDENES </h1></tr>
+</table>
+<table style="margin-right: auto; margin-left: auto;" class="table-bordered table-condensed text-justify">
+
+<tr> 
+<td colspan="4" style="font-size: 18px;background-color: #5bc0de; color: white;"><strong style="text-align: center;">ORDEN Y/O EXHORTO</strong></td>
+<td colspan="4" style="font-size: 18px;background-color: #5bc0de; color: white;"><strong style="text-align: center;">RECOMENDACIONES </strong></td>
+<td colspan="4" style="font-size: 18px;background-color: #5bc0de; color: white;"><strong style="text-align: center;">DIRECCIÓN Y/O GRUPO <br> RESPONSABLE DE LA <br>IMPLEMENTACIÓN DE <br>LA MEDIDA </strong></td>
+<td colspan="4" style="font-size: 18px;background-color: #5bc0de; color: white;"><strong style="text-align: center;">TIEMPO DETERMINADO EN LA<br> SENTENCIA PARA LA <br>EJECUCIÓN DE <br>LA MEDIDA </strong></td>
+</tr>
+
+
+    <tr > 
+    <td colspan="4" style="width: 25%;vertical-align:baseline;"><%= simple_format(@caso.ordenexhorto)  %></label></td>
+    <td colspan="4" style="width: 25%; vertical-align:baseline;"><%= simple_format(@caso.recomendaciones) %> </td>
+    <td colspan="4" style="width: 25%; vertical-align:baseline;"><%= simple_format(@caso.direcciongrupo) %></td>
+    <td colspan="4" style="width: 25%; vertical-align:baseline;"><%= simple_format(@caso.tiempodeterminado) %></td>
+    
+</tr>
+
+</table>
+
+  
+</tr>
+</tr>
+</table>
+</div>
+</div>
+
+</table>
+</body>
+</html>
+
+
+<style type="text/css">.page-break { display:block; clear:both; page-break-after:always; }</style>

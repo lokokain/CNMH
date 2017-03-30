@@ -1,0 +1,66 @@
+<%if (current_user.tpusu !="Observador") %>
+
+<%= form_for(user) do |f| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :usuario %>
+    <%= f.text_field :usuario , :require => true , :autocomplete =>'off' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :contraseña %>
+    <%= f.password_field :contraseña, :required => true, :autocomplete =>'off' %>
+  </div>
+
+  <div class="field">
+   <% if ((@user.tpusu) == 'Observador') %>
+     <%= f.select :tpusu, options_for_select(["Observador","Administrador"]) %>
+        <% else %>
+              <% if ((@user.tpusu) =="Administrador")%>
+                    <%= f.select :tpusu, options_for_select(["Administrador","Observador"]) %>
+             
+                    
+        <% end %>
+    <% end -%>
+
+<% if (((@user.tpusu) != 'Observador') && ((@user.tpusu) !="Administrador") ) %>
+  <%= f.select :tpusu, options_for_select(["Administrador","Observador"])%>  
+<% end %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Nombres %>
+    <%= f.text_field :nombre , :require => true , :autocomplete =>'off' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Apellidos %>
+    <%= f.text_field :apellido , :require => true , :autocomplete =>'off' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Correos %>
+    <%= f.text_field :correo , :require => true , :autocomplete =>'off' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Cargo %>
+    <%= f.text_field :cargo , :autocomplete =>'off' %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Guardar" , :class => "btn btn-success"%>
+  </div>
+<% end %>
+<% end -%>

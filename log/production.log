@@ -1,0 +1,23 @@
+D, [2017-03-26T15:28:56.192001 #4500] DEBUG -- :   [1m[35m (65.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+D, [2017-03-26T15:28:56.310116 #4500] DEBUG -- :   [1m[35m (98.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+D, [2017-03-26T15:28:56.350951 #4500] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2017-03-26T15:28:56.356918 #4500]  INFO -- : Migrating to CreateUsers (20170201164816)
+D, [2017-03-26T15:28:56.367955 #4500] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+D, [2017-03-26T15:28:56.373913 #4500] DEBUG -- :   [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "usuario" varchar, "contraseña" varchar, "tpusu" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+D, [2017-03-26T15:28:56.381765 #4500] DEBUG -- :   [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170201164816"]]
+D, [2017-03-26T15:28:56.479481 #4500] DEBUG -- :   [1m[35m (97.2ms)[0m  [1m[36mcommit transaction[0m
+I, [2017-03-26T15:28:56.480016 #4500]  INFO -- : Migrating to CreateInformes (20170206005846)
+D, [2017-03-26T15:28:56.490224 #4500] DEBUG -- :   [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+D, [2017-03-26T15:28:56.502475 #4500] DEBUG -- :   [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "informes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "idcaso" integer, "fecha" date, "lugar" varchar, "resumen" text, "fechares" date, "descripcion" text, "entidad" varchar, "pdfreci" varchar, "recirespo" boolean, "fechaentre" date, "entredescr" text, "entidadentre" varchar, "pdfentre" varchar, "respondidoentre" boolean, "descripcionob" text, "cumplido" boolean, "fechaau" date, "descrup" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+D, [2017-03-26T15:28:56.515365 #4500] DEBUG -- :   [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170206005846"]]
+D, [2017-03-26T15:28:56.604868 #4500] DEBUG -- :   [1m[35m (89.0ms)[0m  [1m[36mcommit transaction[0m
+D, [2017-03-26T15:28:56.610425 #4500] DEBUG -- :   [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+D, [2017-03-26T15:28:56.620458 #4500] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+D, [2017-03-26T15:28:56.624744 #4500] DEBUG -- :   [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "production"], ["created_at", 2017-03-26 20:28:56 UTC], ["updated_at", 2017-03-26 20:28:56 UTC]]
+D, [2017-03-26T15:28:56.721965 #4500] DEBUG -- :   [1m[35m (96.2ms)[0m  [1m[36mcommit transaction[0m
+D, [2017-03-26T15:28:56.725009 #4500] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2017-03-26T15:28:56.733921 #4500] DEBUG -- :   [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+D, [2017-03-26T15:28:56.735640 #4500] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2017-03-26T15:28:56.737974 #4500] DEBUG -- :   [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+D, [2017-03-26T15:28:56.739929 #4500] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2017-03-26T15:28:56.742697 #4500] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
