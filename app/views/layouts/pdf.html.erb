@@ -9,9 +9,10 @@
     	  <%= wicked_pdf_stylesheet_link_tag "pdf" -%>
     	  <%= wicked_pdf_javascript_include_tag "application" %>
     	  <% if params[:debug].present? %>
+    	  <%= wicked_pdf_stylesheet_link_tag "pdf" -%>
   		<%= stylesheet_link_tag 'documents' %>
 			<% else %>
-  			<%= wicked_pdf_stylesheet_link_tag 'documents' %>
+			<%= wicked_pdf_stylesheet_link_tag "pdf" -%>
 			<% end %>
   
 <div style="image-rendering: auto"> <%= wicked_pdf_image_tag ('marcapdf.png') %></div>  
