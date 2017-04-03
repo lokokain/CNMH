@@ -8,6 +8,11 @@
 	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     	  <%= wicked_pdf_stylesheet_link_tag "pdf" -%>
     	  <%= wicked_pdf_javascript_include_tag "application" %>
+    	  <% if params[:debug].present? %>
+  		<%= stylesheet_link_tag 'documents' %>
+			<% else %>
+  			<%= wicked_pdf_stylesheet_link_tag 'documents' %>
+			<% end %>
   
 <div style="image-rendering: auto"> <%= wicked_pdf_image_tag ('marcapdf.png') %></div>  
                  
