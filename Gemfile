@@ -38,6 +38,7 @@ gem 'bcrypt'
 # http://wkhtmltopdf.org/downloads.html
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
+gem 'wkhtmltopdf-heroku'
 
 #gem 'wdm', '>= 0.1.0'
 # Use Capistrano for deployment
