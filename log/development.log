@@ -4635,3 +4635,380 @@ Sent data Reporte.pdf (0.5ms)
 Completed 200 OK in 1049ms (Views: 0.4ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-04-03 23:00:48 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+Redirected to http://localhost:3000/log-in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log-in" for 127.0.0.1 at 2017-04-03 23:00:48 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 374ms (Views: 372.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/style.css" for 127.0.0.1 at 2017-04-03 23:00:49 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/style.css"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendered collection of /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [47 times] (10.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.6ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (32.8ms)
+Started GET "/style.css" for 127.0.0.1 at 2017-04-03 23:00:49 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/style.css"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered collection of /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [47 times] (7.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (23.4ms)
+Started POST "/log-in" for 127.0.0.1 at 2017-04-03 23:00:53 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+B7BkuDSLndNKFFMXLhxT0Bkr5C3IUq9csTRwihTG9ZxzuPNRdyAFGFBprpRfPjzKrx90EtYELPEmrqPDKIMeQ==", "usuario"=>"camilo", "contraseña"=>"camilo123", "commit"=>"Entrar"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."usuario" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["usuario", "camilo"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-03 23:00:53 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 59ms (Views: 56.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/casos" for 127.0.0.1 at 2017-04-03 23:00:55 -0500
+Processing by CasosController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering casos/index.html.erb within layouts/application
+  [1m[36mCaso Load (1.0ms)[0m  [1m[34mSELECT "casos".* FROM "casos"[0m
+  Rendered casos/index.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 70ms (Views: 61.2ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/casos/1" for 127.0.0.1 at 2017-04-03 23:01:04 -0500
+Processing by CasosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCaso Load (0.3ms)[0m  [1m[34mSELECT  "casos".* FROM "casos" WHERE "casos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering casos/show.html.erb within layouts/application
+  Rendered casos/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 55ms (Views: 51.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/casos" for 127.0.0.1 at 2017-04-03 23:01:05 -0500
+Processing by CasosController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering casos/index.html.erb within layouts/application
+  [1m[36mCaso Load (0.4ms)[0m  [1m[34mSELECT "casos".* FROM "casos"[0m
+  Rendered casos/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 57ms (Views: 55.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/casos/new" for 127.0.0.1 at 2017-04-03 23:01:07 -0500
+Processing by CasosController#new as HTML
+  Rendering casos/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered casos/_form.html.erb (21.4ms)
+  Rendered casos/new.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 73ms (Views: 71.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/casos/new" for 127.0.0.1 at 2017-04-03 23:01:17 -0500
+Processing by CasosController#new as HTML
+  Rendering casos/new.html.erb within layouts/application
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered casos/_form.html.erb (29.0ms)
+  Rendered casos/new.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 87ms (Views: 81.2ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/casos/new" for 127.0.0.1 at 2017-04-03 23:01:33 -0500
+Processing by CasosController#new as HTML
+  Rendering casos/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered casos/_form.html.erb (8.3ms)
+  Rendered casos/new.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 60ms (Views: 58.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/casos/new" for 127.0.0.1 at 2017-04-03 23:02:18 -0500
+Processing by CasosController#new as HTML
+  Rendering casos/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered casos/_form.html.erb (7.2ms)
+  Rendered casos/new.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 55ms (Views: 54.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/casos/new" for 127.0.0.1 at 2017-04-03 23:02:26 -0500
+Processing by CasosController#new as HTML
+  Rendering casos/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered casos/_form.html.erb (8.8ms)
+  Rendered casos/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 57ms (Views: 56.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/casos/new" for 127.0.0.1 at 2017-04-03 23:02:34 -0500
+Processing by CasosController#new as HTML
+  Rendering casos/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered casos/_form.html.erb (8.8ms)
+  Rendered casos/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 57ms (Views: 56.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/casos/new" for 127.0.0.1 at 2017-04-03 23:04:03 -0500
+Processing by CasosController#new as HTML
+  Rendering casos/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered casos/_form.html.erb (27.2ms)
+  Rendered casos/new.html.erb within layouts/application (28.2ms)
+Completed 200 OK in 133ms (Views: 108.9ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/casos" for 127.0.0.1 at 2017-04-03 23:04:04 -0500
+Processing by CasosController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering casos/index.html.erb within layouts/application
+  [1m[36mCaso Load (0.5ms)[0m  [1m[34mSELECT "casos".* FROM "casos"[0m
+  Rendered casos/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 59ms (Views: 56.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/casos/new" for 127.0.0.1 at 2017-04-03 23:04:16 -0500
+Processing by CasosController#new as HTML
+  Rendering casos/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered casos/_form.html.erb (9.9ms)
+  Rendered casos/new.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 61ms (Views: 59.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/casos" for 127.0.0.1 at 2017-04-03 23:04:33 -0500
+Processing by CasosController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering casos/index.html.erb within layouts/application
+  [1m[36mCaso Load (0.4ms)[0m  [1m[34mSELECT "casos".* FROM "casos"[0m
+  Rendered casos/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 57ms (Views: 55.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/casos/1/edit" for 127.0.0.1 at 2017-04-03 23:04:35 -0500
+Processing by CasosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCaso Load (0.3ms)[0m  [1m[34mSELECT  "casos".* FROM "casos" WHERE "casos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering casos/edit.html.erb within layouts/application
+  Rendered casos/_form.html.erb (8.4ms)
+  Rendered casos/edit.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 64ms (Views: 59.1ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/casos/1" for 127.0.0.1 at 2017-04-03 23:04:44 -0500
+Processing by CasosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FrYZM4ZVdk8Jbv7Zd7va5ZK3hcktCbCwLDw0iC69OB+fZjtsI1vYLCUHCS96f1NZ+G9XidFw6r6aYl/FCkwvsA==", "caso"=>{"radicado"=>"123", "nombreimplicado"=>"<strong>asd</strong>", "tribunal"=>"asd", "estado"=>"No Confirmada", "sala"=>"asd", "tipodecision"=>"asd", "segundainstancia"=>"0", "magistradoponente"=>"asd", "bloque"=>"asd", "lugardeinfluencia"=>"asd", "lugarexpedicion"=>"asd", "fechaexpedicion(1i)"=>"2017", "fechaexpedicion(2i)"=>"3", "fechaexpedicion(3i)"=>"29", "estadoprovidencia"=>"asd", "secomunico"=>"0", "fechacomunicacion(1i)"=>"2017", "fechacomunicacion(2i)"=>"3", "fechacomunicacion(3i)"=>"29", "delimitaciondeapartados"=>"asdqweasd", "ordenexhorto"=>"asd", "recomendaciones"=>"asd", "direcciongrupo"=>"asd", "tiempodeterminado"=>"asd"}, "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCaso Load (0.2ms)[0m  [1m[34mSELECT  "casos".* FROM "casos" WHERE "casos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCaso Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "casos" WHERE "casos"."radicado" = $1 AND ("casos"."id" != $2) LIMIT $3[0m  [["radicado", 123], ["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "casos" SET "nombreimplicado" = $1, "updated_at" = $2 WHERE "casos"."id" = $3[0m  [["nombreimplicado", "<strong>asd</strong>"], ["updated_at", 2017-04-04 04:04:44 UTC], ["id", 1]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/casos/1
+Completed 302 Found in 14ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/casos/1" for 127.0.0.1 at 2017-04-03 23:04:44 -0500
+Processing by CasosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCaso Load (0.3ms)[0m  [1m[34mSELECT  "casos".* FROM "casos" WHERE "casos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering casos/show.html.erb within layouts/application
+  Rendered casos/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 49ms (Views: 46.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/casos/1/edit" for 127.0.0.1 at 2017-04-03 23:04:47 -0500
+Processing by CasosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCaso Load (0.3ms)[0m  [1m[34mSELECT  "casos".* FROM "casos" WHERE "casos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering casos/edit.html.erb within layouts/application
+  Rendered casos/_form.html.erb (7.7ms)
+  Rendered casos/edit.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 58ms (Views: 55.3ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/casos/1" for 127.0.0.1 at 2017-04-03 23:04:56 -0500
+Processing by CasosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IuNvCchwpaw+co/Km8EYn10xxqsXlQ38Fg9P1wopkaSrM01WbX4LzxIbeDyWBZEjN+kU6+vsV/KgUSSaLtiGCw==", "caso"=>{"radicado"=>"123", "nombreimplicado"=>"andres", "tribunal"=>"asd", "estado"=>"No Confirmada", "sala"=>"asd", "tipodecision"=>"asd", "segundainstancia"=>"0", "magistradoponente"=>"asd", "bloque"=>"asd", "lugardeinfluencia"=>"asd", "lugarexpedicion"=>"asd", "fechaexpedicion(1i)"=>"2017", "fechaexpedicion(2i)"=>"3", "fechaexpedicion(3i)"=>"29", "estadoprovidencia"=>"asd", "secomunico"=>"0", "fechacomunicacion(1i)"=>"2017", "fechacomunicacion(2i)"=>"3", "fechacomunicacion(3i)"=>"29", "delimitaciondeapartados"=>"asdqweasd", "ordenexhorto"=>"asd", "recomendaciones"=>"asd", "direcciongrupo"=>"asd", "tiempodeterminado"=>"asd"}, "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCaso Load (0.3ms)[0m  [1m[34mSELECT  "casos".* FROM "casos" WHERE "casos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCaso Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "casos" WHERE "casos"."radicado" = $1 AND ("casos"."id" != $2) LIMIT $3[0m  [["radicado", 123], ["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "casos" SET "nombreimplicado" = $1, "updated_at" = $2 WHERE "casos"."id" = $3[0m  [["nombreimplicado", "andres"], ["updated_at", 2017-04-04 04:04:56 UTC], ["id", 1]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/casos/1
+Completed 302 Found in 8ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/casos/1" for 127.0.0.1 at 2017-04-03 23:04:56 -0500
+Processing by CasosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCaso Load (0.2ms)[0m  [1m[34mSELECT  "casos".* FROM "casos" WHERE "casos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering casos/show.html.erb within layouts/application
+  Rendered casos/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 56ms (Views: 54.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2017-04-03 23:05:00 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 49ms (Views: 46.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-04-03 23:05:01 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 53ms (Views: 49.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2017-04-03 23:05:05 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 58ms (Views: 54.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/log-out" for 127.0.0.1 at 2017-04-03 23:05:07 -0500
+Processing by SessionsController#destroy as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-03 23:05:07 -0500
+Processing by HomeController#index as HTML
+Redirected to http://localhost:3000/log-in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log-in" for 127.0.0.1 at 2017-04-03 23:05:07 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 60ms (Views: 59.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/style.css" for 127.0.0.1 at 2017-04-03 23:05:07 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/style.css"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered collection of /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [47 times] (7.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (25.7ms)
